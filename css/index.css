@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: 'iconfont';  /* project id 2315449 */
+    src: url('http://at.alicdn.com/t/font_2315449_x3rhsebt2bs.eot');
+    src: url('http://at.alicdn.com/t/font_2315449_x3rhsebt2bs.eot?#iefix') format('embedded-opentype'),
+    url('http://at.alicdn.com/t/font_2315449_x3rhsebt2bs.woff2') format('woff2'),
+    url('http://at.alicdn.com/t/font_2315449_x3rhsebt2bs.woff') format('woff'),
+    url('http://at.alicdn.com/t/font_2315449_x3rhsebt2bs.ttf') format('truetype'),
+    url('http://at.alicdn.com/t/font_2315449_x3rhsebt2bs.svg#iconfont') format('svg');
+  }
+.iconfont{
+    font-family: 'iconfont';
+    font-style: normal;
+}
+
+a{
+    color: #666;
+}
+body{
+    background-color: #f4f4f4;
+    font-size: 12px;
+    color: #666;
+}
+#shortCut{
+    height: 30px;
+    border-bottom: 1px solid #ddd;
+    background-color: #e3e4e5;
+}
+#header{
+    height: 140px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+#fs{
+    height: 480px;
+    margin-bottom: 30px;
+    /* background-color: aqua; */
+}
+#J_seckill{
+    height: 260px;
+    /* background-color: brown; */
+}
+.w{
+    width: 1190px;
+    margin: 0 auto;
+    position: relative;
+}

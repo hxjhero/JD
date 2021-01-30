@@ -1,0 +1,132 @@
+<link rel="stylesheet" href="./css/search.css">
+<div id="logo">
+    <a href="#">
+        <img src="https://img10.360buyimg.com/img/jfs/t1/124600/14/15671/184916/5f8d7112E7f52db74/60ee6ba8e8e5ce3a.gif" alt="">
+    </a>
+</div>
+    <!-- 搜索区域 -->
+<div id="search-box">
+   <div class="search-form">
+    <input type="text" class="search-text" placeholder="全球热爱盛典">
+    <span class="photo-search-btn iconfont">&#xe663;</span>
+    <button class="search-btn iconfont">&#xe60d;</button>
+    <ul class="search-content">
+       <!-- <li>asas</li> -->
+    </ul>
+   </div>
+       <!-- 热门关键词 -->
+    <div id="hotwords"></div>
+    <!-- 购物车 -->
+    <div class="settleup">
+        <i class="iconfont">&#xe63a;</i>
+        <a target="_blank" href="//cart.jd.com/cart.action">我的购物车</a>
+        <i class="ci-count" id="shopping-amount">0</i>
+    </div>
+</div>
+<ul class="navitems">
+    <li>
+        <!-- <a href="#" class="active">秒杀</a>
+        <a href="#" class="active">优惠券</a>
+        <a href="#">PLUS会员</a>
+        <a href="#">品牌闪购</a>
+        <a href="#">拍卖</a>
+        <a href="#">京东家电</a>
+        <a href="#">京东超市</a>
+        <a href="#">京东生鲜</a>
+        <a href="#">京东国际</a>
+        <a href="#">京东金融</a> -->
+    </li>
+</ul>
+
+<script>
+    // 搜索框输入的时候进行获取下拉数据
+    var searchAjaxTimer = null;//防抖
+    $('.search-text').on('input', function (e) {
+        var val = $(this).val();
+        clearTimeout(searchAjaxTimer);
+        if(val) {
+            searchAjaxTimer = setTimeout(function () {
+                $.ajax({
+                    url: 'https://suggest.taobao.com/sug',
+                    type:'get',
+                    dataType: 'jsonp',
+                    data: {
+                        code: 'utf-8',
+                        q: val,
+                        callback: 'dealData',
+                    }
+                })
+            }, 500)
+        }
+    }).click(function () {
+        $(this).trigger('input');
+    });
+
+    $('.search-form').mouseleave(function () {
+        $('.search-content').hide();
+    });
+
+    //搜索结果处理函数
+    function dealData(data){
+        // console.log(data);
+        data = data.result;
+        var str = '';
+        data.forEach(function(item){
+            str +=`<a href="#">
+                    <li>
+                    ${item[0]}
+                    <span class="productsNum">约${parseInt(item[1])}个商品</span>
+                    </li>
+                </a>`
+        });
+        $('.search-content').html(str).show();
+    }
+
+    //请求热门关键词数据
+    $.ajax({
+        url:'/hotwords',
+        type:'get',
+        dataType:'json',
+        success:function(res){
+            // console.log(res.result);
+            renderHotWords(res.result);
+        }
+    });
+    //渲染热门关键词
+    function renderHotWords(data){
+        var str = data.reduce(function(prev,item,index){
+            return prev + `<a href="${item.href}" class="${index === 0 ? 'red':''}">${item.word}</a>`
+        },'');
+        $('#hotwords').html(str);
+
+    }
+    //每隔一秒钟改变热门关键词的第一个词
+    setInterval(function () {
+        $.ajax({
+            url: '/recommendWords',
+            dataType: 'json',
+            success: function (res) {
+                // console.log(res.text)
+                $('#hotwords > a.red').text(res.text);
+            }
+        })
+    }, 3000);
+
+    // 请求导航栏数据
+    $.ajax({
+        url:'/navitems',
+        type:'get',
+        dataType:'json',
+        success:function(res){
+            console.log(res.result);
+            renderNavitems(res.result);
+        }
+    });
+    function renderNavitems(data){
+        var str = data.reduce(function(prev,item,index){
+            return prev + `<a href="${item.href}" class="${index < 2 ? 'active':''}">${item.word}</a>`
+        },'');
+        $('.navitems li').html(str);
+    }
+
+</script>

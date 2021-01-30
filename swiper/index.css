@@ -1,0 +1,85 @@
+/* 轮播图的样式 */
+
+.my-swiper ul,.my-swiper li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.my-swiper{
+    position: relative;
+    overflow: hidden;
+
+}
+@font-face {
+    font-family: 'iconfont';  /* project id 2315449 */
+    src: url('https://at.alicdn.com/t/font_2315449_hrmbb3vnvqb.eot');
+    src: url('https://at.alicdn.com/t/font_2315449_hrmbb3vnvqb.eot?#iefix') format('embedded-opentype'),
+    url('https://at.alicdn.com/t/font_2315449_hrmbb3vnvqb.woff2') format('woff2'),
+    url('https://at.alicdn.com/t/font_2315449_hrmbb3vnvqb.woff') format('woff'),
+    url('https://at.alicdn.com/t/font_2315449_hrmbb3vnvqb.ttf') format('truetype'),
+    url('https://at.alicdn.com/t/font_2315449_hrmbb3vnvqb.svg#iconfont') format('svg');
+  }
+
+
+.my-swiper.my-swiper-fade .my-swiper-content{
+    position: absolute;
+}
+.my-swiper.my-swiper-fade .my-swiper-content li{
+    position: absolute;
+}
+.my-swiper.my-swiper-animate .my-swiper-content::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.my-swiper.my-swiper-animate .my-swiper-content li{
+    float: left;
+}
+.my-swiper .my-swiper-btn{
+    width: 25px;
+    height: 35px;
+    background-color: rgba(0,0,0,.15);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    /* top: 50%;
+    margin-top: -17.5px; */
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'iconfont';
+}
+.my-swiper .my-swiper-btn.my-swiper-rbtn{
+    right: 0;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+}
+.my-swiper .my-swiper-btn.my-swiper-lbtn{
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+.my-swiper .my-swiper-spots {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+.my-swiper .my-swiper-spots .my-swiper-spot{
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 100%;
+    margin: 0 3px;
+    cursor: pointer;
+    background-color:rgba(0,0,0,.15);
+}
+.my-swiper .my-swiper-spots .my-swiper-spot.spot-active{
+    background-color: #fff;
+}
+.my-swiper .my-swiper-content{
+    position: absolute;
+}
+

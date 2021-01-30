@@ -1,0 +1,152 @@
+#logo{
+    width: 190px;
+    height: 120px;
+    position: relative;
+    top: 10px;
+}
+#logo img{
+    width: 100%;
+    height: 100%;
+}
+#search-box{
+    position: absolute;
+    left: 200px;
+    top: 25px;
+}
+#search-box .search-form{
+    margin-left: 60px;
+    width: 546px;
+    height: 32px;
+    border: 2px solid #e2231a;
+    background: #fff;
+    font-size: 0;
+    position: relative;
+}
+#search-box .search-form .search-text{
+    padding: 2px 44px 2px 17px;
+    width: 425px;
+    height: 26px;
+    border: 1px solid transparent;
+    line-height: 26px;
+    font-size: 12px;
+    outline: none;
+}
+.search-form .search-btn {
+    width: 58px;
+    height: 32px;
+    line-height: 32px;
+    border: none;
+    background-color: #e1251b;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    vertical-align: top;
+    outline: none;
+    cursor: pointer;
+}
+.photo-search-btn {
+    position: absolute;
+    right: 75px;
+    top: 5px;
+    width: 19px;
+    height: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.search-form .search-content{
+    font-size: 12px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    -webkit-box-shadow: 1px 2px 1px rgba(0,0,0,.2);
+    box-shadow: 1px 2px 1px rgba(0,0,0,.2);
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 487px;
+    display: none;
+    z-index: 1024;
+}
+.search-content li {
+    padding: 1px 6px;
+    line-height: 24px;
+    cursor: pointer;
+}
+.search-content li:hover{
+    background-color: #f5f5f5;
+}
+.productsNum{
+    float: right;
+}
+#hotwords{
+    margin-left: 60px;
+    width: 550px;
+    overflow: hidden;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 5px;
+}
+#hotwords a{
+    margin-left: 10px;
+}
+#hotwords a.red{
+    color: red;
+}
+.settleup{
+    width: 130px;
+    height: 34px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 34px;
+    border: 1px solid #eee;
+    position: absolute;
+    right: -150px;
+    top: 0;
+    z-index: 21;
+    color:  #c81623;
+}
+.settleup:hover{
+    border-color: #c81623;
+}
+.settleup a{
+    color:  #c81623;
+    margin-left: 15px;
+}
+.settleup .ci-count{
+    font-weight: bold;
+    position: absolute;
+    left: 25px;
+    top: 0;
+    font-style: normal;
+    padding: 1px 3px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #fff;
+    background-color: #e1251b;
+    border-radius: 7px;
+    min-width: 12px;
+    text-align: center;
+}
+.settleup .iconfont{
+    font-size: 13px;
+}
+.navitems{
+    overflow: hidden;
+    position: absolute;
+    left: 203px;
+    bottom: -20px;
+    height: 40px;
+    line-height: 40px;
+    padding-top: 20px;
+}
+.navitems a{
+    font-size: 15px;
+    margin-right: 20px;
+}
+.navitems a:nth-child(1),
+.navitems a:nth-child(2){
+    font-weight: 700;
+
+}
+.navitems a.active{
+    color:  #e1251b;
+}

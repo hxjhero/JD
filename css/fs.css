@@ -1,0 +1,417 @@
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    white-space: nowrap;
+}
+a:hover{
+    color: red;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.fs1{
+    width: 190px;
+    height: 480px;
+    position: relative;
+    float: left;
+    margin-right: 10px;
+}
+.fs1 #menu{
+    margin-top: 10px;
+    padding-top: 10px;
+    background-color: #fff;
+    height: 460px;
+}
+.fs1 #menu li{
+    padding-left: 18px;
+    cursor: pointer;
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+}
+.fs1 #menu li a{
+    font-size: 14px;
+    color: #333;
+}
+.fs1 #menu li.menu-current{
+    background-color: #d9d9d9;
+}
+
+.fs1 #menu-content{
+    width: 998px;
+    min-height: 468px;
+    position: absolute;
+    left: 190px;
+    top: 0;
+    background-color: #fff;
+    border: 1px solid #f7f7f7;
+    box-shadow: 2px 0 5px rgba(0,0,.3);
+    padding:20px 0 10px;
+    box-sizing: border-box;
+    display: none;
+    z-index: 1024;
+}
+.fs1 #menu-content .tabs{
+     padding-left: 20px;
+}
+.fs1 #menu-content a.tabs_item{
+    padding: 0 10px;
+    height: 24px;
+    background-color: #333;
+    line-height: 24px;
+    color: #fff;
+    margin-right: 10px;
+    display: inline-block;
+}
+.fs1 #menu-content a.tabs_item:hover{
+    background-color: #c81623;
+    color: #fff;
+}
+.subs{
+    position: relative;
+    padding-left: 20px;
+}
+.ads{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 198px;
+    background-color: aqua;
+}
+.subs dl dt{
+    width: 70px;
+    text-align: right;
+    font-weight: 700;
+    float: left;
+}
+.subs dl dt a{
+    color: #333;
+    font-weight: 700;
+    height: 22px;
+    line-height: 22px;
+    display: inline-block;
+}
+.subs dl dd{
+    float: left;
+    margin-left: 5px;
+    width: 700px;/* 浮动会导致元素过多时换行 固定宽度就解决了 */
+} 
+.subs dl dd a{
+    display: inline-block;
+    margin: 3px 0;
+    padding: 0 7px;
+    height: 16px;
+    line-height: 16px;
+}
+.fs2{
+    float: left;
+    width: 790px;
+    height: 480px;
+}
+.fs2 .slider_wrapper{
+    width: 590px;
+    height: 480px;
+    margin-top: 10px;
+    margin-right: 10px;
+    float: left;
+}
+.focus-item__core{
+    display: inline-block;
+    margin-right: 10px;
+    width: 590px;
+    height: 470px;
+}
+.sliderRecommendWrapper {
+    width: 190px;
+    height: 470px;
+    margin-top: 10px;
+    float: left;
+}
+.focus-item__core{
+    display: inline-block;
+    margin-right: 10px;
+    width: 590px;
+    height: 470px;
+}
+.focus-item__recommend {
+    width: 190px;
+    vertical-align: top;
+    display: inline-block;
+    height: 100%;
+}
+.focus-item__recommend .recommend-item {
+    height: 150px;
+    display: block;
+    margin-bottom: 10px;
+}
+.focus-item__recommend .recommend-item__image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.fs3{
+    width: 190px;
+    height: 480px;
+    position: relative;
+    float: left;
+}
+.fs3 .user{
+    height: 102px;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: #fff;
+    position: relative;
+}
+.fs3 .user .J_user_avatar{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.fs3 .user .J_user_avatar img{
+    width: 100%;
+    height: 100%;
+}
+.fs3 .user .user_show {
+    position: absolute;
+    top: 23px;
+    left: 74px;
+    right: 10px;
+}
+.fs3 .user .user_profit {
+    height: 25px;
+    font-size: 0;
+    text-align: center;
+    position: absolute;
+    top: 70px;
+    left: 10px;
+}
+.fs3 .user .user_profit .user_profit_lk{
+    display: inline-block;
+    margin: 0 5px;
+    width: 70px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    border-radius: 13px;
+    background: #e1251b;
+    -webkit-transition: background .3s ease,color .3s ease;
+    transition: background .3s ease,color .3s ease;
+}
+.fs3 .user .user_profit .user_profit_lk_plus {
+    background: #363634;
+    color: #e5d790;
+}
+.fs3 .user .user_profit a:hover {
+    background-color: #c81623;
+    color: #fff;
+}
+.fs3 .user::after{
+    position: absolute;
+    height: 1px;
+    left: 15px;
+    right: 15px;
+    background: -webkit-gradient(linear,right top,left top,from(white),color-stop(#eeeeee),color-stop(#eeeeee),to(white));
+    background: linear-gradient(270deg,white,#eeeeee,#eeeeee,white);
+    content: " ";
+    bottom: 0;
+}
+
+.fs3 .news{
+    height: 130px;
+    background: #fff;
+    margin-left: 10px;
+    position: relative;
+}
+.fs3 .news::after{
+    position: absolute;
+    height: 1px;
+    left: 15px;
+    right: 15px;
+    background: -webkit-gradient(linear,right top,left top,from(white),color-stop(#eeeeee),color-stop(#eeeeee),to(white));
+    background: linear-gradient(270deg,white,#eeeeee,#eeeeee,white);
+    content: " ";
+    bottom: 0;
+}
+.fs3 .news .news_hd {
+    height: 20px;
+    padding: 10px 0 0;
+    position: relative;
+    line-height: 20px;
+    font-size: 0;
+    margin-bottom: 8px;
+}
+.fs3 .news .news_tit {
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 15px;
+    color: #333;
+}
+.fs3 .news .news_hd  .news_more{
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 12px;
+    color: #999;
+}
+.fs3 .news .news_hd .news_more:hover {
+    color: #c81623;
+}
+.fs3 .news .news_list{
+    position: relative;
+    margin: 0 15px;
+    height: 88px;
+    
+}
+.fs3 .news .news_list li{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: 5px;
+}
+.fs3 .news .news_list .news_tag {
+    display: inline-block;
+    position: relative;
+    font-size: 12px;
+    height: 16px;
+    width: 35px;
+    line-height: 16px;
+    text-align: center;
+    vertical-align: 0;
+    color: #e1251b;
+    background-color: rgba(225,37,27,.08);
+    margin-right: 6px;
+}
+
+.service{
+    position: relative;
+    height: 238px;
+    overflow: hidden;
+}
+.service .service_entry{
+    width: 190px;
+    height: 238px;
+    overflow: hidden;
+    padding: 5px .5px;
+    background: #fff;
+    box-sizing: border-box;
+    margin-left: 10px;
+
+}
+.service .service_entry .service_list{
+    padding-top: 5px;
+    height: 230px;
+}
+.service .service_entry .service_list li{
+    position: relative;
+    float: left;
+    width: 63px;
+    height: 55px;
+    overflow: hidden;
+    background: #fff;
+    text-align: center;
+}
+.service .service_entry .service_list li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+}
+.service .service_entry .service_list .service_ico{
+    width: 28px;
+    height: 28px;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    transition: margin-top 0.3s;
+}
+.service .service_entry .service_list .service_ico img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+}
+.service_corner_txt{
+    position: absolute;
+    font-style: normal;
+    right: 3px;
+    top: 0;
+    background-color: #e1251b;
+    color: #fff;
+    width: 14px;
+    height: 14px;
+    text-align: center;
+    line-height: 14px;
+}
+.service_ico_img_hover {
+    display: none;
+}
+.service_entry .service_list li:hover .service_ico_img_hover {
+    display: block;
+}
+.service_pop{
+    position: absolute;
+    width: 190px;
+    height: 206px;
+    background-color: #fff;
+    top: 32px;
+    transform: translateY(100%);/*向下平移100%*/
+    transition: transform 0.3s;
+    margin-left: 10px;
+}
+.service.service_expend .service_pop {
+    transform: translateY(0%);
+}
+.service.service_expend .service_frame .service_ico{
+    margin-top: -28px;
+}
+.service.service_expend .service_frame.service_active a{
+    color: red;
+}
+.service.service_expend .service_frame.service_active a .service_txt {
+    border-bottom: 2px solid red;
+}
+.service.service_expend .service_frame2 {
+    margin-top: 0;
+}
+.service.service_expend .service_frame2.service_active {
+    margin-top: -56px;
+}
+.service_pop .close {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -10px;
+    cursor: pointer;
+}
+.service_pop .close::after, .service_pop .close::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    margin-left: -1px;
+    width: 2px;
+    height: 20px;
+    background-color: black;
+}
+
+.service_pop .close::after {
+    transform: rotateZ(45deg);
+}
+
+.service_pop .close::before {
+    transform: rotateZ(-45deg);
+}
